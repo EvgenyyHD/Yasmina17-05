@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "Helvetica_bold";
+  src: url(./assets/fonts/helvetica_bold.otf);
+}
+@font-face {
+  font-family: "Helvetica_reg";
+  src: url(./assets/fonts/helvetica_regular.otf);
+}
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container{
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.hero{
+  display: flex;
+  .sec0{
+    .buts{
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      button{
+        background-color: #fff;
+        font-family: "Helvetica_bold";
+        text-align: left;
+        border: 0;
+        font-weight: 700;
+    font-size: 16px;
+    color: #5c5c5e;
+      }
+    }
+  }
+  .tc1{
+    visibility: hidden;
+  }
+  .tc2{
+    visibility: hidden;
+  }
+}

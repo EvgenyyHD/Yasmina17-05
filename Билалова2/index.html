@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Билалова</title>
+  </head>
+  <body>
+    <div class="flex justify-center items-center min-h-screen bg-gray-100 p-4">
+      <div class="bg-white shadow-lg rounded-lg">
+        <div class="flex">
+          <button
+            class="bg-blue-500 text-white p-4 rounded-t hover:bg-blue-600 focus:outline-none"
+            onclick="showTab(0)"
+          >
+            Tab 1
+          </button>
+          <button
+            class="bg-gray-200 text-gray-800 p-4 rounded-t hover:bg-blue-600 focus:outline-none"
+            onclick="showTab(1)"
+          >
+            Tab 2
+          </button>
+          <button
+            class="bg-gray-200 text-gray-800 p-4 rounded-t hover:bg-blue-600 focus:outline-none"
+            onclick="showTab(2)"
+          >
+            Tab 3
+          </button>
+        </div>
+        <div class="p-4" id="tab-content-0">
+          <p>Content fot Tab 1</p>
+          <img
+            src="https://i.pinimg.com/736x/46/4c/fd/464cfdd218f94f086ccaeb08163a5812.jpg"
+            alt=""
+            class="mt-4 rounded shadow-lg"
+          />
+        </div>
+        <div class="p-4 hidden" id="tab-content-1">
+          <p>Content fot Tab 2</p>
+          <img
+            src="https://i.pinimg.com/736x/8e/9e/38/8e9e386d1e63fb0b17debbc1ac5d7990.jpg"
+            alt=""
+            class="mt-4 rounded shadow-lg"
+          />
+        </div>
+        <div class="p-4 hidden" id="tab-content-2">
+          <p>Content fot Tab 3</p>
+          <img
+            src="https://i.pinimg.com/736x/5a/2a/71/5a2a7187dd31e370927b7706743a371b.jpg"
+            alt=""
+            class="mt-4 rounded shadow-lg"
+          />
+        </div>
+      </div>
+    </div>
+    <script>
+      function showTab(index) {
+        const contents = document.querySelectorAll('[id^="tab-content-"]');
+        contents.forEach((content, i) => {
+          content.classList.toggle("hidden", i != index);
+        });
+      }
+    </script>
+  </body>
+</html>
